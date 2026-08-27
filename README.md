@@ -5,16 +5,17 @@ Native cross-platform Go console client for
 shell for containers. Runs on Linux, macOS, and Windows. Made by
 [UniDoc](https://unidoc.io).
 
-Built because the SPICE clients that exist are painful, incus doesn't
-speak VNC, and jumping between `incus console`, `incus exec`, and a
-graphical viewer is a workflow tax. incus-console is one window: pick a
-host, drill down through projects to instances, click any of them to
-open the right kind of console — framebuffer for VMs, shell for
-containers — with sessions kept alive as you switch between them.
+One window for everything: pick a host, drill down through projects to
+instances, click any of them to open the right kind of console —
+SPICE framebuffer for VMs, a full terminal for containers via `incus
+exec` — with sessions kept alive as you switch between them. Built
+because the SPICE clients that exist are painful, incus doesn't speak
+VNC, and jumping between `incus console`, `incus exec`, and a separate
+graphical viewer is a workflow tax.
 
-Not the daily driver for OS use — RDP and SSH are. This is the "help,
-RDP is broken, let me get into the console and fix the network" tool,
-plus first-time VM setup, BitLocker recovery, and container debugging.
+Also a single-window read-only view of cluster members, networks, and
+network ACLs across every project, without reaching for the `incus`
+CLI.
 
 ## Features
 
@@ -43,6 +44,9 @@ plus first-time VM setup, BitLocker recovery, and container debugging.
   the boot sequence, and re-handshakes SPICE when the guest is back.
 - **Restricted trust certs** — client cert scope is enforced server-side
   by incus; only accessible projects and instances appear in the tree.
+- **Cluster and network observability** — read-only panels for cluster
+  members, networks, and network ACLs, scoped per project, without
+  switching to the `incus` CLI.
 
 ## Not included
 

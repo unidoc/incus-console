@@ -4,10 +4,11 @@ go 1.26.7
 
 require (
 	fyne.io/fyne/v2 v2.7.5-0.20260529084154-f5f48d2ab76e
-	github.com/unidoc/spice v0.0.0-00010101000000-000000000000
+	github.com/fsnotify/fsnotify v1.10.1
 	github.com/fyne-io/terminal v0.0.0-20260618170948-86c23cc49e34
 	github.com/gorilla/websocket v1.5.4-0.20250319132907-e064f32e3674
-	github.com/lxc/incus/v7 v7.0.0-00010101000000-000000000000
+	github.com/lxc/incus/v7 v7.3.1-0.20260820081523-64d47514c580
+	github.com/unidoc/spice v0.0.0-20260826230745-f8a8d5e31616
 	github.com/zalando/go-keyring v0.2.8
 	gopkg.in/yaml.v3 v3.0.1
 )
@@ -34,7 +35,6 @@ require (
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/flosch/pongo2/v6 v6.1.0 // indirect
 	github.com/fredbi/uri v1.1.1 // indirect
-	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/fyne-io/gl-js v0.2.1-0.20260315212741-029c47fd27e8 // indirect
 	github.com/fyne-io/glfw-js v0.3.0 // indirect
 	github.com/fyne-io/image v0.1.1 // indirect
@@ -97,9 +97,4 @@ require (
 	golang.org/x/term v0.45.0 // indirect
 	golang.org/x/text v0.40.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
-)
-
-replace (
-	github.com/unidoc/spice => ../spice
-	github.com/lxc/incus/v7 => ../incus
 )

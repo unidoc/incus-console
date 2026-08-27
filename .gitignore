@@ -1,0 +1,34 @@
+# Build products
+/bin/
+/fyne-cross/
+*.app/
+incus-console
+incus-console.exe
+
+# Vendored deps — regenerate with `just vendor`. Kept out of git so the
+# repo stays small. fyne-io/terminal is used unmodified, no local patch.
+/vendor/
+
+# Go build/test byproducts
+*.test
+*.out
+coverage.*
+go.work
+go.work.sum
+
+# Local user config drops used during development
+/tmp/
+*.local.yaml
+.env
+.env.*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

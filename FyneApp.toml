@@ -1,0 +1,42 @@
+# Fyne application manifest.
+#
+# Consumed by `fyne package` (native macOS build) and `fyne-cross`
+# (cross-compiled Linux/Windows builds). Keep the ID and Name in sync
+# with the `-app-id` arg passed to fyne-cross in the Justfile.
+#
+# Description shows up on the Windows installer, the Linux .desktop
+# entry, and (via CFBundleGetInfoString) in macOS Finder's Get Info
+# panel.
+
+[Details]
+  Icon    = "internal/branding/icon.png"
+  Name    = "incus-console"
+  ID      = "io.unidoc.incus-console"
+  Version = "0.1.0"
+  Build   = 1
+
+[Description]
+  Summary  = "Native SPICE + shell console for incus VMs and containers."
+  Full     = """
+incus-console is a single-window, cross-platform desktop client for
+managing running incus instances. It provides a SPICE framebuffer for
+virtual machines and an incus exec shell (with a full VT100 terminal)
+for containers, connected over the incus HTTPS + WebSocket API using
+client-cert TLS authentication.
+
+Meant for the workflow the incus CLI can't cover: getting into a VM's
+console when RDP or SSH is broken, recovering BitLocker keys, doing
+first-time OS installs, and debugging containers that won't stay up
+long enough for exec-and-attach. Multi-host sidebar, per-project
+scoping, restricted-trust support, guest-agent installer for Windows,
+bidirectional clipboard, and read-only observability panels for
+cluster members, networks, and network ACLs.
+
+Made by UniDoc (https://unidoc.io). Released under the Apache License
+2.0.
+"""
+
+[Development]
+  # Fyne allows toggling a debug/verbose flag at build time. Off by
+  # default so packaged builds match the released binary.
+  Debug = false

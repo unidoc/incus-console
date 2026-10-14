@@ -2,7 +2,6 @@
 /bin/
 /fyne-cross/
 *.app/
-incus-console
 incus-console.exe
 
 # Vendored deps — regenerate with `just vendor`. Kept out of git so the
